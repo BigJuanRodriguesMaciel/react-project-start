@@ -1,0 +1,17 @@
+@import "./breakpoints";
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin full-desktop {
+  @media (min-width: $full-desktop) {
+    @content;
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../scss/colors";
+
+.button--default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 14px 32px;
+  background: colors.$primary-color;
+  margin: 0;
+  border: 0;
+  border-radius: 8px;
+  color: colors.$white;
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  &__title {
+    margin-left: 18px;
+  }
+}
+
+.button--outlined {
+  @extend .button--default;
+  background-color: transparent;
+  border: 1px solid colors.$primary-color;
+  &__title {
+    color: colors.$primary-color;
+  }
+}
+
+.button--disabled {
+  @extend .button--default;
+  cursor: default;
+  background-color: colors.$disabled-color;
+}
+
+.button--secondary {
+  @extend .button--default;
+  background-color: colors.$secondary-color;
+}

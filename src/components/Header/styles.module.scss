@@ -1,0 +1,8 @@
+@use '../../scss/colors';
+
+.header {
+    width: 100%;
+    height: 64px;
+    background: colors.$primary-color;
+    z-index: 2;
+}

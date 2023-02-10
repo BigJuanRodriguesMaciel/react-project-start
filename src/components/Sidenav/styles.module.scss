@@ -1,0 +1,23 @@
+@use "../../scss/colors";
+@import "../../scss/mixins";
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 0;
+  height: 100vh;
+  transition: width 0.3s;
+  border-right: 1px solid colors.$muted-color;
+  position: absolute;
+  z-index: 10;
+  background: colors.$white;
+  @include tablet {
+    position: static;
+  }
+
+  &.open {
+    width: 280px;
+    transition: width 0.3s;
+  }
+}

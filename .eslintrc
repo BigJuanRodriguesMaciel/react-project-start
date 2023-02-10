@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parserOptions": {},
+    "extends": [
+        "react-app",
+        "plugin:@typescript-eslint/recommended",
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:react/recommended",
+        "plugin:import/recommended",
+        "eslint-config-prettier"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx"]
+            },
+            "typescript": {}
+        }
+    },
+    "ignorePatterns": ["vite.config.ts", ".commitlintrc.js"],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-non-null-assertion": "off"
+    }
+}
